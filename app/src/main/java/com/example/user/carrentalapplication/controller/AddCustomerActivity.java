@@ -124,6 +124,7 @@ public class AddCustomerActivity extends BaseActivity implements View.OnClickLis
 
         }
 
+
     }
     protected void sendEmail() {
 
