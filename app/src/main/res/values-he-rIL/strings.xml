@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">אפליקציית השכרת רכב</string>
+    <string name="cars">מכוניות</string>
+    <string name="customers">לקוחות</string>
+    <string name="carModels">דגמי רכב</string>
+    <string name="brunch">סניפים</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.carrentalapplication.controller.AddCarActivity">
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editBrunch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/brunchNum"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editModelNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/model"
+            android:inputType="number"/>
+
+        <EditText
+            android:id="@+id/editKilometers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/kilometrrs"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editCarNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/carNum"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/OK_addCar_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/OK_addCar"
+
+             />
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

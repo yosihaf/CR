@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.carrentalapplication.controller.MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="460dp"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/car_btn"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/buttoncar"
+            android:shadowColor="#2752A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="@string/cars"
+            android:textColor="#FFFBF7"
+            android:textSize="32sp"
+            android:layout_weight="0.71" />
+
+        <Button
+            android:id="@+id/model_btn"
+            android:text="@string/carModels"
+            android:textColor="#FFFBF7"
+            android:textSize="32sp"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/buttonmodel"
+            android:shadowColor="#2752A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5" />
+
+        <Button
+            android:id="@+id/brunch_btn"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/buttombrunch"
+            android:shadowColor="#2752A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="@string/brunch"
+            android:textColor="#FFFBF7"
+            android:textSize="32sp"/>
+
+
+        <Button
+            android:id="@+id/customers_btn"
+            android:text="@string/customers"
+            android:textColor="#FFFBF7"
+            android:textSize="32sp"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/buttoncustomers"
+            android:shadowColor="#2752A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.user.carrentalapplication.controller.IsExsitsCustomerActivity">
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="@string/id" />
+
+        <Button
+            android:id="@+id/searchCustomer_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/OK_searchCustomer" />
+
+        <TextView
+            android:id="@+id/answerView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/answer"
+            />
+        <TextView
+            android:id="@+id/firstNameView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/firstName"
+            />
+        <TextView
+            android:id="@+id/lastNameView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/lastName"
+            />
+        <TextView
+            android:id="@+id/idView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            />
+        <TextView
+            android:id="@+id/phoneNumberView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/phoneNumber"
+            />
+        <TextView
+            android:id="@+id/emailView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            />
+        <TextView
+            android:id="@+id/creditCardView"
+            android:visibility="invisible"
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:text="@string/creditCard"
+            />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

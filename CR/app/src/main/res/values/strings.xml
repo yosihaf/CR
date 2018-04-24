@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Car Rental Application</string>
+    <string name="cars">Cars</string>
+    <string name="customers">Customers</string>
+    <string name="carModels">Car Model</string>
+    <string name="brunch">Branch</string>
+    //cars
+    <string name="addCar">Add Cars</string>
+    <string name="getCars">Get Cars</string>
+    //add car
+    <string name="brunchNum">brunch numbuer</string>
+    <string name="model">model number</string>
+    <string name="kilometrrs">kilometers</string>
+    <string name="carNum">car number</string>
+    <string name="OK_addCar">Add car</string>
+    //Branch
+    <string name="getBranch">Get Branch</string>
+    //getBranch
+    <string name="address">Address</string>
+    <string name="branchNum">Number</string>
+    <string name="place">Parking Space</string>
+    //Customer
+    <string name="addCustomer">Add Customer</string>
+    <string name="isExistCusomer">is Exist Cusomer ?</string>
+    //add Customer
+    <string name="lastName">Last Name</string>
+    <string name="firstName">First Name</string>
+    <string name="id">ID</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="email">E-mail</string>
+    <string name="creditCard">Credit card</string>
+    <string name="OK_addCostumer">Add costumer</string>
+    //Model car
+    <string name="addModel">Add model</string>
+    <string name="code">Code</string>
+    <string name="Company">Company</string>
+    <string name="modelName">Model</string>
+    <string name="engineCapacity">Engine Capacity</string>
+    <string-array name="gear">
+        <item>AUTOMATIC</item>
+        <item>MANUAL</item>
+    </string-array>
+    <string name="seats">Seats </string>
+    <string name="OK_addModel" >OK Add Model</string>
+</resources>

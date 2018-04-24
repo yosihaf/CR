@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title="@string/home"/>
+    <item android:id="@+id/carMenu"
+        android:title="@string/carsMenu">
+        <menu>
+            <item android:id="@+id/addCarMenu"
+                android:title="@string/addCarsMenu"/>
+            <item android:id="@+id/getCarMenu"
+                android:title="@string/getCarsMenu"/>
+        </menu>
+    </item>
+    <item android:id="@+id/carModelMenu"
+        android:title="@string/carModelsMenu">
+        <menu>
+            <item android:id="@+id/addCarModelMenu"
+                android:title="@string/addCarModelMenu"/>
+            <item android:id="@+id/getCarModelMenu"
+                android:title="@string/getCarModelMenu"/>
+        </menu>
+    </item>
+    <item android:id="@+id/customerMenu"
+        android:title="@string/customersMenu">
+        <menu>
+            <item android:id="@+id/addCustomerMenu"
+                android:title="@string/addCustomersMenu"/>
+            <item android:id="@+id/getCustomerMenu"
+                android:title="@string/getCustomersMenu"/>
+        </menu>
+    </item>
+    <item android:id="@+id/branchMenu"
+        android:title="@string/brunchMenu">
+        <menu>
+            <item android:id="@+id/getBranchMenu"
+                android:title="@string/GetBrunchMenu"/>
+        </menu>
+    </item>
+</menu>
