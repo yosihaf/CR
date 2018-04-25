@@ -98,6 +98,8 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
                         super.onPostExecute(aLong);
                         if (aLong > 0)
                             Toast.makeText(getBaseContext(), "Car " + aLong + " Added OK", Toast.LENGTH_SHORT).show();
+                         else
+                            Toast.makeText(getBaseContext(), "Car is Exsist", Toast.LENGTH_SHORT).show();
                     }
 
                     @Override

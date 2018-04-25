@@ -56,8 +56,8 @@ public class GetCustomerActivity extends BaseActivity
                             TextView creditCard = (TextView) convertView.findViewById(R.id.creditCardView);
                             lastName.setText("  Last Name: " + cusomers.get(position).getLastName().toString());
                             firstName.setText("  First Name: " + cusomers.get(position).getFirstName().toString());
-                            id.setText("  ID: " + ((Long) cusomers.get(position).getId()).toString());
-                            phoneNumber.setText("  Phone Number:  0" + ((Long) cusomers.get(position).getPhoneNumber()).toString());
+                            id.setText("  ID: " +  cusomers.get(position).getId());
+                            phoneNumber.setText("  Phone Number:  0" +  cusomers.get(position).getPhoneNumber());
                             email.setText("  Email Number: " + (cusomers.get(position).getEmail()).toString());
                             creditCard.setText("  Branch Number: " + ((Long) cusomers.get(position).getCreditCard()).toString());
 

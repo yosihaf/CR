@@ -7,15 +7,15 @@ package com.example.user.carrentalapplication.model.entities;
 public class Customer {
     private String lastName;
     private String firstName;
-    private long id;
-    private long phoneNumber;
+    private String id;
+    private String phoneNumber;
     private String email;
     private long creditCard;
 
     public Customer() {
     }
 
-    public Customer(String lastName, String firstName, long id, long phoneNumber, String email, long creditCard) {
+    public Customer(String lastName, String firstName, String id, String phoneNumber, String email, long creditCard) {
         this.lastName = lastName;
         this.firstName = firstName;
         this.id = id;
@@ -40,19 +40,19 @@ public class Customer {
         this.firstName = firstName;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public long getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(long phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

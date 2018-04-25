@@ -11,6 +11,7 @@ import com.example.user.carrentalapplication.model.entities.Branch;
 import com.example.user.carrentalapplication.model.entities.Car;
 import com.example.user.carrentalapplication.model.entities.CarModel;
 import com.example.user.carrentalapplication.model.entities.Customer;
+import com.example.user.carrentalapplication.model.entities.Gearbox;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,17 +31,32 @@ public class List_DBManager implements DB_manager {
     static
     {
         customers = new ArrayList<>();
+        customers.add(new Customer("yoseff","haf","3024","0323","yoseff2525@gmail.com",1234));
+        customers.add(new Customer("ert","qwer","232232","1231323","yosef@gmail.com",121212));
+        customers.add(new Customer("yoseff","haf","3024","0323","yo@gmail.com",9595));
+        customers.add(new Customer("yoseff","haf","3024","0323","yoseff25@gmail.com",4567));
         brunches = new ArrayList<>();
         brunches.add(new Branch("haifa",100,12));
+        brunches.add(new Branch("Tel Aviv",1033,1233));
+        brunches.add(new Branch("bny braq",11111,22222));
 
         carModels = new ArrayList<>();
+        carModels.add(new CarModel( 123,  "company3","ford",  1234, Gearbox.AUTOMATIC, 123 ));
+        carModels.add(new CarModel( 1234,  "company2","mazda",  1222, Gearbox.AUTOMATIC, 1231234 ));
+        carModels.add(new CarModel( 124566,  "company1","er",  124565, Gearbox.MANUAL, 12323 ));
+
         cars = new ArrayList<>();
+        cars.add(new Car( 124566,  13455644,23,  124565));
+        cars.add(new Car( 566,  12123444,144,  124565));
+        cars.add(new Car( 24566,  1244,106,  10992));
+        cars.add(new Car( 1266,  1344,107,  1098));
+
     }
     @Override
-    public Customer ReturnCustumerById(Long values)
+    public Customer ReturnCustumerById(String values)
     {
         for (Customer item:customers) {
-            if(item.getId()==values)
+            if(item.getId().equals(values) )
                 return item;
         }
         return null;
@@ -51,21 +67,44 @@ public class List_DBManager implements DB_manager {
             return true;
         return false;
     }
+    @Override
+    public boolean ReturnCarById(Long values){
+        for (Car item:cars) {
+            if(item.getCarNumber()==values )
+                return true;
+        }
+        return false;
+    }
+    @Override
+    public boolean ReturnCarModelById(Long values)
+    {
+        for (CarModel item:carModels) {
+            if(item.getCode()==values )
+                return true;
+        }
+        return false;
+    }
 
     @Override
-    public long addCustomer(Customer values) {
+    public Boolean addCustomer(Customer values) {
+        if (ReturnCustumerById(values.getId()) != null)
+            return false;
         customers.add(values);
-        return values.getId();
+        return true;
     }
 
     @Override
     public long addCarModel(CarModel values) {
+        if (ReturnCarModelById(values.getCode()) == true)
+            return -1;
         carModels.add(values);
         return values.getCode();
     }
 
     @Override
     public long addCar(Car values) {
+        if (ReturnCarById(values.getCarNumber()) == true)
+            return -1;
         cars.add(values);
         return values.getCarNumber();
     }

@@ -80,10 +80,10 @@ public class CarRentalConst {
     public static Customer ContentValuesToCustomer(ContentValues contentValues) {
 
         Customer customer = new Customer();
-        customer.setId(contentValues.getAsLong(CustomerConst.ID));
+        customer.setId(contentValues.getAsString(CustomerConst.ID));
         customer.setFirstName(contentValues.getAsString(CustomerConst.FIRST_NAME));
         customer.setLastName(contentValues.getAsString(CustomerConst.LAST_NAME));
-        customer.setPhoneNumber(contentValues.getAsLong(CustomerConst.PHONE));
+        customer.setPhoneNumber(contentValues.getAsString(CustomerConst.PHONE));
         customer.setEmail(contentValues.getAsString(CustomerConst.EMAIL));
         customer.setCreditCard(contentValues.getAsLong(CustomerConst.CREDIT_CARD));
         return customer;

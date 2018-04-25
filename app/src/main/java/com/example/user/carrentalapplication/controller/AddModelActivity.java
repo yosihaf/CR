@@ -99,6 +99,9 @@ public class AddModelActivity extends BaseActivity implements View.OnClickListen
                     super.onPostExecute(aLong);
                     if (aLong > -1)
                         Toast.makeText(getBaseContext(), "Model " + aLong + " Added OK", Toast.LENGTH_SHORT).show();
+                     else
+                        Toast.makeText(getBaseContext(), "Model is Exsist", Toast.LENGTH_SHORT).show();
+
                 }
 
                 @Override

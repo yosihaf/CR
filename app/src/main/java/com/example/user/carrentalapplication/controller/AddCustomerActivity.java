@@ -94,8 +94,8 @@ public class AddCustomerActivity extends BaseActivity implements View.OnClickLis
     {
         String first_name = firstName.getText().toString();
         String last_name = lastName.getText().toString();
-        long _id = Long.parseLong(id.getText().toString());
-        long phone_number = Long.parseLong(phoneNumber.getText().toString());
+        String _id = id.getText().toString();
+        String phone_number = phoneNumber.getText().toString();
         String _email = email.getText().toString();
         long _creditCard = Long.parseLong(creditCard.getText().toString());
         return new Customer(last_name,first_name,_id,phone_number,_email,_creditCard);
@@ -103,17 +103,19 @@ public class AddCustomerActivity extends BaseActivity implements View.OnClickLis
     private void AddCostumer() {
         try {
 
-            new AsyncTask<Void,Void,Long>(){
+            new AsyncTask<Void,Void,Boolean>(){
 
                 @Override
-                protected void onPostExecute(Long aLong) {
+                protected void onPostExecute(Boolean aLong) {
                     super.onPostExecute(aLong);
-                    if(aLong>-1)
-                        Toast.makeText( getBaseContext(), "Costumer "+aLong+" Added OK", Toast.LENGTH_SHORT ).show();
+                    if(aLong==true)
+                        Toast.makeText( getBaseContext(), "Costumer "+id.getText().toString()+" Added OK", Toast.LENGTH_SHORT ).show();
+                    else
+                        Toast.makeText(getBaseContext(),"Costumer is Exsist  ",Toast.LENGTH_SHORT ).show();
                 }
 
                 @Override
-                protected Long doInBackground(Void... params) {
+                protected Boolean doInBackground(Void... params) {
                     return DBManagerFactory.getManager().addCustomer(NewCustomer());
                 }
             }.execute();

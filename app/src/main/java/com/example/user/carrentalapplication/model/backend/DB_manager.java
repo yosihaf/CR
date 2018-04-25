@@ -24,9 +24,11 @@ public interface DB_manager {
     List<Branch> getAllBrunches();
     List<Car> getAllCars();
     */
-    Customer ReturnCustumerById(Long values);
+    Customer ReturnCustumerById(String values);
+    boolean ReturnCarById(Long values);
+    boolean ReturnCarModelById(Long values);
     boolean custumerExsits(Customer values);
-    long addCustomer(Customer values);
+    Boolean addCustomer(Customer values);
     long addCarModel(CarModel values);
     long addCar(Car values);
     List<CarModel> getAllModels();
