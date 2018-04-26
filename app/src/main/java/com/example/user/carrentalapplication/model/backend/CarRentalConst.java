@@ -27,8 +27,8 @@ public class CarRentalConst {
     }
 
     public static class BrunchConst{
-        public static final String ADRESS = "Adress";
-        public static final String NUMBER_OF_PARKING_SPACE = "NumberOfParkingSpaces";
+        public static final String ADRESS = "adress";
+        public static final String NUMBER_OF_PARKING_SPACE = "numberOfParkingSpaces";
         public static final String BRUNCH_NUMBER = "_id";
     }
 
@@ -42,10 +42,10 @@ public class CarRentalConst {
     }
 
     public static class CarConst{
-        public static final String BRUNCH_NUMBER = "_id";
+        public static final String BRUNCH_NUMBER = "branch";
         public static final String MODEL = "model";
-        public static final String KILOMETERS = "kilometers";
-        public static final String CAR_NUMBER = "carNumber";
+        public static final String KILOMETERS = "km";
+        public static final String CAR_NUMBER = "_id";
 
     }
 

@@ -7,14 +7,14 @@ import java.util.Date;
  */
 
 public class Order {
-    private long customerNum;
+    private String customerNum;
     private StatusOrder status;
     private int numOfCars;
     private Date rentalStart;
     private Date rentalFinish;
     private long kilometerStart;
     private long kilometerFinish;
-    private boolean fuel;
+    private boolean gaz;
     private int liter;
     private int billing;
     private long orderNum;
@@ -22,7 +22,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(long customerNum, StatusOrder status, int numOfCars, Date rentalStart, Date rentalFinish, long kilometerStart, long kilometerFinish, boolean fuel, int liter, int billing, long orderNum) {
+    public Order(String customerNum, StatusOrder status, int numOfCars, Date rentalStart, Date rentalFinish, long kilometerStart, long kilometerFinish, boolean fuel, int liter, int billing, long orderNum) {
         this.customerNum = customerNum;
         this.status = status;
         this.numOfCars = numOfCars;
@@ -30,15 +30,15 @@ public class Order {
         this.rentalFinish = rentalFinish;
         this.kilometerStart = kilometerStart;
         this.kilometerFinish = kilometerFinish;
-        this.fuel = fuel;
+        this.gaz = fuel;
         this.liter = liter;
         this.billing = billing;
         this.orderNum = orderNum;
     }
 
-    public long getCustomerNum() {return customerNum;}
+    public String getCustomerNum() {return customerNum;}
 
-    public void setCustomerNum(long costumerNum) {
+    public void setCustomerNum(String costumerNum) {
         this.customerNum = costumerNum;
     }
 
@@ -90,12 +90,12 @@ public class Order {
         this.kilometerFinish = kilometerFinish;
     }
 
-    public boolean isFuel() {
-        return fuel;
+    public boolean isGaz() {
+        return gaz;
     }
 
-    public void setFuel(boolean fuel) {
-        this.fuel = fuel;
+    public void setGaz(boolean gaz) {
+        this.gaz = gaz;
     }
 
     public int getLiter() {
