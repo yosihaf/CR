@@ -31,10 +31,10 @@ public class List_DBManager implements DB_manager {
     static
     {
         customers = new ArrayList<>();
-        customers.add(new Customer("yoseff","haf","3024","0323","yoseff2525@gmail.com",1234));
-        customers.add(new Customer("ert","qwer","232232","1231323","yosef@gmail.com",121212));
-        customers.add(new Customer("yoseff","haf","3024","0323","yo@gmail.com",9595));
-        customers.add(new Customer("yoseff","haf","3024","0323","yoseff25@gmail.com",4567));
+        customers.add(new Customer("yoseff","haf","30898987824","0323","yoseff2525@gmail.com",9));
+        customers.add(new Customer("ert","qwer","232278732","1231323","yosef@gmail.com",2));
+        customers.add(new Customer("yoseff","haf","3024","0323","yo@gmail.com",8));
+        customers.add(new Customer("yoseff","haf","3024","0323","yoseff25@gmail.com",6));
         brunches = new ArrayList<>();
         brunches.add(new Branch("haifa",100,12));
         brunches.add(new Branch("Tel Aviv",1033,1233));
@@ -52,6 +52,7 @@ public class List_DBManager implements DB_manager {
         cars.add(new Car( 1266,  1344,107,  1098));
 
     }
+
     @Override
     public Customer ReturnCustumerById(String values)
     {
