@@ -12,6 +12,7 @@ import com.example.user.carrentalapplication.model.entities.Car;
 import com.example.user.carrentalapplication.model.entities.CarModel;
 import com.example.user.carrentalapplication.model.entities.Customer;
 import com.example.user.carrentalapplication.model.entities.Gearbox;
+import com.example.user.carrentalapplication.model.entities.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,7 @@ public class List_DBManager implements DB_manager {
     private static List<Branch> brunches;
     private static List<CarModel> carModels;
     private static List<Car> cars;
+    private static List<User> users;
 
     static
     {
@@ -51,7 +53,21 @@ public class List_DBManager implements DB_manager {
         cars.add(new Car( 24566,  1244,106,  10992));
         cars.add(new Car( 1266,  1344,107,  1098));
 
+        users = new ArrayList<>();
+
     }
+
+    @Override
+    public boolean AddUser(User user) {
+        users.add(user);
+        return true;
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return users;
+    }
+
 
     @Override
     public Customer ReturnCustumerById(String values)

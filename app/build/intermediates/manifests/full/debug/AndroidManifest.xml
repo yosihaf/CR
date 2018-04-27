@@ -19,13 +19,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.user.carrentalapplication.controller.MainActivity" >
+        <activity android:name="com.example.user.carrentalapplication.controller.LogInActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.example.user.carrentalapplication.controller.MainActivity" />
         <activity android:name="com.example.user.carrentalapplication.controller.CarActivity" />
         <activity android:name="com.example.user.carrentalapplication.controller.AddCarActivity" />
         <activity android:name="com.example.user.carrentalapplication.controller.BranchActivity" />

@@ -20,13 +20,13 @@
             android:hint="@string/brunchNum"
             android:inputType="number" />
 
-        <EditText
-            android:id="@+id/editModelNum"
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/spinerModelNum"
+            android:layout_width="330dp"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/model"
-            android:inputType="number"/>
+
+            />
+
 
         <EditText
             android:id="@+id/editKilometers"

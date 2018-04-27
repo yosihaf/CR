@@ -45,7 +45,7 @@
     <string name="creditCard">Credit card</string>
     <string name="OK_addCostumer">Add costumer</string>
     //is Exsits
-    <string name="answer" >answer is: </string>
+    <string name="answer">answer is: </string>
     //Model car
     <string name="addModel">Add model</string>
     <string name="code">Code</string>
@@ -58,8 +58,8 @@
     </string-array>
     <string name="seats">Seats </string>
     <string name="OK_addModel">Add Model</string>
-    <string name="OK_searchCustomer" > Search Cusromer </string>
-    <string name="getModel" >Get Model</string>
+    <string name="OK_searchCustomer"> Search Cusromer </string>
+    <string name="getModel">Get Model</string>
 
 
 </resources>

@@ -9,8 +9,10 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.example.user.carrentalapplication.R;
@@ -18,18 +20,25 @@ import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
 import com.example.user.carrentalapplication.model.backend.DB_manager;
 import com.example.user.carrentalapplication.model.datasource.List_DBManager;
 import com.example.user.carrentalapplication.model.entities.Car;
+import com.example.user.carrentalapplication.model.entities.CarModel;
+import com.example.user.carrentalapplication.model.entities.Gearbox;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddCarActivity extends BaseActivity implements View.OnClickListener {
 
-    private EditText brunchNum,modelNum,kilometers,carNum;
+    private EditText brunchNum,kilometers,carNum;
     private Button addCar;
+    private Spinner modelNum;
 
 
 
     private void findViews() {
         addCar = (Button) findViewById(R.id.OK_addCar_btn);
         brunchNum=(EditText) findViewById(R.id.editBrunch);
-        modelNum=(EditText) findViewById(R.id.editModelNum);
+        modelNum=(Spinner) findViewById(R.id.spinerModelNum);
+        modelNum.setAdapter(new ArrayAdapter<Long>(this, android.R.layout.simple_spinner_item, codeModel()));
         kilometers=(EditText) findViewById(R.id.editKilometers);
         carNum=(EditText) findViewById(R.id.editCarNum);
 
@@ -37,6 +46,18 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
 
 
 
+    }
+
+    List<Long> codeModel()
+    {
+        List<Long> lst = new ArrayList<Long>() ;
+
+
+        for (CarModel item:DBManagerFactory.getManager().getAllModels())
+        {
+            lst.add(item.getCode());
+        }
+        return lst;
     }
 
 
@@ -53,10 +74,7 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
             if (TextUtils.isEmpty(brunchNum.getText().toString())) {
                 brunchNum.setError("Field must be full");
                 brunchNum.setHintTextColor(Color.RED);}
-            else
-            if (TextUtils.isEmpty(modelNum.getText().toString())) {
-                modelNum.setError("Field must be full");
-                modelNum.setHintTextColor(Color.RED);}
+
             else
             if (TextUtils.isEmpty(kilometers.getText().toString())) {
                 kilometers.setError("Field must be full");
@@ -80,7 +98,8 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
     private Car NewCar()
     {
         Integer brunch = Integer.parseInt(brunchNum.getText().toString());
-        Integer model = Integer.parseInt(modelNum.getText().toString());
+        Integer model = Integer.parseInt(modelNum.getSelectedItem().toString());
+
         Integer km = Integer.parseInt(kilometers.getText().toString());
         Integer car = Integer.parseInt(carNum.getText().toString());
         return new Car(brunch,model,km,car);

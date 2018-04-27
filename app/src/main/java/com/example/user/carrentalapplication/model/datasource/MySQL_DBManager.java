@@ -5,6 +5,7 @@ import com.example.user.carrentalapplication.model.entities.Branch;
 import com.example.user.carrentalapplication.model.entities.Car;
 import com.example.user.carrentalapplication.model.entities.CarModel;
 import com.example.user.carrentalapplication.model.entities.Customer;
+import com.example.user.carrentalapplication.model.entities.User;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -20,6 +21,16 @@ import java.util.List;
 public class MySQL_DBManager implements DB_manager {
 
     private String WEB_URL ="http://crottenb.vlab.jct.ac.il/crottenb/";
+
+    @Override
+    public boolean AddUser(User user) {
+        return false;
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        return null;
+    }
 
     @Override
     public Customer ReturnCustumerById(String values) {

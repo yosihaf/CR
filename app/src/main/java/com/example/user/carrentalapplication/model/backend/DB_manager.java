@@ -6,6 +6,7 @@ import com.example.user.carrentalapplication.model.entities.Branch;
 import com.example.user.carrentalapplication.model.entities.Car;
 import com.example.user.carrentalapplication.model.entities.CarModel;
 import com.example.user.carrentalapplication.model.entities.Customer;
+import com.example.user.carrentalapplication.model.entities.User;
 
 import java.util.List;
 
@@ -24,6 +25,8 @@ public interface DB_manager {
     List<Branch> getAllBrunches();
     List<Car> getAllCars();
     */
+    boolean AddUser(User user);
+    List<User> getAllUsers();
     Customer ReturnCustumerById(String values);
     boolean ReturnCarById(Long values);
     boolean ReturnCarModelById(Long values);
