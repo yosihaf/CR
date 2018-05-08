@@ -3,7 +3,8 @@ package com.example.user.carrentalapplication.model.entities;
 /**
  * Created by User on 12/04/2018.
  */
-
+//import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class Branch {
     private String adress;
     private int NumberOfParkingSpaces;

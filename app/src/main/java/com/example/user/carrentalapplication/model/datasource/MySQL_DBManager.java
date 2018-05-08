@@ -91,7 +91,7 @@ public class MySQL_DBManager implements DB_manager {
                     Branch branch = new Branch();
                     branch.setBranchNumber(jsonObject.getInt("_id"));
                     branch.setAdress(jsonObject.getString("address"));
-                    branch.setNumberOfParkingSpaces(jsonObject.getInt("numberOfParkingSpaces"));
+                    branch.setNumberOfParkingSpaces(jsonObject.getInt("spaces"));
                     result.add(branch);
                 }
                 return result;
