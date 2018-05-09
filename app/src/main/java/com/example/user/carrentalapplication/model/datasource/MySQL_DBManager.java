@@ -10,6 +10,7 @@ import com.example.user.carrentalapplication.model.entities.User;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -58,8 +59,20 @@ public class MySQL_DBManager implements DB_manager {
     }
 
     @Override
-    public long addCarModel(CarModel values) {
-        return 0;
+    public long addCarModel(CarModel values)
+    {
+        try {
+            String result = PHPtools.POST(WEB_URL + "/addStudent.php", values);
+            long id = Long.parseLong(result);
+            if (id > 0)
+                SetUpdate();
+            printLog("addStudent:\n" + result);
+            return id;
+        } catch (IOException e) {
+            printLog("addStudent Exception:\n" + e);
+            return -1;
+        }
+
     }
 
     @Override
