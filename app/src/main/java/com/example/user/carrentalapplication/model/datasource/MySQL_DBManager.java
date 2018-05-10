@@ -1,5 +1,9 @@
 package com.example.user.carrentalapplication.model.datasource;
 
+import android.content.ContentValues;
+import android.provider.SyncStateContract;
+import android.util.Log;
+
 import com.example.user.carrentalapplication.model.backend.DB_manager;
 import com.example.user.carrentalapplication.model.entities.Branch;
 import com.example.user.carrentalapplication.model.entities.Car;
@@ -21,7 +25,7 @@ import java.util.List;
 
 public class MySQL_DBManager implements DB_manager {
 
-    private String WEB_URL ="http://crottenb.vlab.jct.ac.il/crottenb/";
+    private String WEB_URL ="http://crottenb.vlab.jct.ac.il/CR/";
 
     @Override
     public boolean AddUser(User user) {
@@ -50,29 +54,35 @@ public class MySQL_DBManager implements DB_manager {
 
     @Override
     public boolean custumerExsits(Customer values) {
-        return false;
+           return  false;
     }
 
     @Override
     public Boolean addCustomer(Customer values) {
-        return null;
+
+        try {
+            String url = WEB_URL + "/addCustomer.php" ;
+
+            final ContentValues v = new ContentValues();
+            v.put( "_id", values.getId() );
+            v.put( "first_name", values.getFirstName() );
+            v.put( "last_name", values.getLastName() );
+            v.put( "phoneNumber", values.getPhoneNumber() );
+            v.put( "email", values.getEmail() );
+            v.put( "creditCard", values.getCreditCard() );
+
+            PHPtools.POST( url, v );
+        } catch (Exception e) {
+            //Log.w( Constants.Log.APP_LOG, e.getMessage() );
+        }
+        return true;
     }
 
     @Override
     public long addCarModel(CarModel values)
     {
-        try {
-            String result = PHPtools.POST(WEB_URL + "/addStudent.php", values);
-            long id = Long.parseLong(result);
-            if (id > 0)
-                SetUpdate();
-            printLog("addStudent:\n" + result);
-            return id;
-        } catch (IOException e) {
-            printLog("addStudent Exception:\n" + e);
-            return -1;
-        }
 
+return values.getCode();
     }
 
     @Override
@@ -96,7 +106,7 @@ public class MySQL_DBManager implements DB_manager {
             List<Branch> result = new ArrayList<Branch>();
             try
             {
-                String str = PHPtools.GET(WEB_URL + "/getBranches.php");
+                String str = PHPtools.GET(WEB_URL + "getBranches.php");
                 JSONArray array = new JSONObject(str).getJSONArray("branches");
                 for (int i = 0; i < array.length(); i++)
                 {
@@ -104,7 +114,7 @@ public class MySQL_DBManager implements DB_manager {
                     Branch branch = new Branch();
                     branch.setBranchNumber(jsonObject.getInt("_id"));
                     branch.setAdress(jsonObject.getString("address"));
-                    branch.setNumberOfParkingSpaces(jsonObject.getInt("spaces"));
+                    branch.setNumberOfParkingSpaces(jsonObject.getInt("space"));
                     result.add(branch);
                 }
                 return result;
