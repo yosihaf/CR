@@ -61,7 +61,14 @@ public class MySQL_DBManager implements DB_manager {
     public Boolean addCustomer(Customer values) {
 
         try {
-            getAllCustomers();
+            List<Customer> result=getAllCustomers();
+            for (Customer item:result) {
+            if(item.getId().equals(values.getId()) )
+            {
+                return false;
+            }
+            }
+
             String url = WEB_URL + "addCustomer.php" ;
 
             final ContentValues v = new ContentValues();
@@ -107,6 +114,7 @@ return values.getCode();
             {
                 JSONObject jsonObject = array.getJSONObject(i);
                 Customer customer = new Customer();
+                customer.setId(jsonObject.getString("_id"));
                 customer.setFirstName(jsonObject.getString("first_name"));
                 customer.setLastName(jsonObject.getString("last_name"));
                 customer.setCreditCard(jsonObject.getInt("creditCard"));
