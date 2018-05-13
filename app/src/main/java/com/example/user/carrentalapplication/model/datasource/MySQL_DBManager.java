@@ -61,7 +61,8 @@ public class MySQL_DBManager implements DB_manager {
     public Boolean addCustomer(Customer values) {
 
         try {
-            String url = WEB_URL + "/addCustomer.php" ;
+            getAllCustomers();
+            String url = WEB_URL + "addCustomer.php" ;
 
             final ContentValues v = new ContentValues();
             v.put( "_id", values.getId() );
@@ -97,6 +98,28 @@ return values.getCode();
 
     @Override
     public List<Customer> getAllCustomers() {
+        List<Customer> result = new ArrayList<Customer>();
+        try
+        {
+            String str = PHPtools.GET(WEB_URL + "/getCustomer.php");
+            JSONArray array = new JSONObject(str).getJSONArray("customer");
+            for (int i = 0; i < array.length(); i++)
+            {
+                JSONObject jsonObject = array.getJSONObject(i);
+                Customer customer = new Customer();
+                customer.setFirstName(jsonObject.getString("first_name"));
+                customer.setLastName(jsonObject.getString("last_name"));
+                customer.setCreditCard(jsonObject.getInt("creditCard"));
+                customer.setEmail(jsonObject.getString("email"));
+                customer.setPhoneNumber(jsonObject.getString("phoneNumber"));
+
+                result.add(customer);
+            }
+            return result;
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
         return null;
     }
 
