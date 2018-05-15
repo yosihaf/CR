@@ -1,11 +1,6 @@
 package com.example.user.carrentalapplication.model.datasource;
 
-import  android.content.ContentValues;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 
-
-import com.example.user.carrentalapplication.model.backend.CarRentalConst;
 import com.example.user.carrentalapplication.model.backend.DB_manager;
 import com.example.user.carrentalapplication.model.entities.Branch;
 import com.example.user.carrentalapplication.model.entities.Car;
@@ -17,7 +12,6 @@ import com.example.user.carrentalapplication.model.entities.User;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.example.user.carrentalapplication.model.backend.CarRentalConst.*;
 /**
  * Created by User on 12/04/2018.
  */
@@ -69,7 +63,7 @@ public class List_DBManager implements DB_manager {
     }
 
 
-    @Override
+
     public Customer ReturnCustumerById(String values)
     {
         for (Customer item:customers) {
@@ -85,7 +79,7 @@ public class List_DBManager implements DB_manager {
         return false;
     }
     @Override
-    public boolean ReturnCarById(Long values){
+    public boolean carExists(Long values){
         for (Car item:cars) {
             if(item.getCarNumber()==values )
                 return true;
@@ -93,7 +87,7 @@ public class List_DBManager implements DB_manager {
         return false;
     }
     @Override
-    public boolean ReturnCarModelById(Long values)
+    public boolean carModelExists(Long values)
     {
         for (CarModel item:carModels) {
             if(item.getCode()==values )
@@ -112,7 +106,7 @@ public class List_DBManager implements DB_manager {
 
     @Override
     public long addCarModel(CarModel values) {
-        if (ReturnCarModelById(values.getCode()) == true)
+        if (carModelExists(values.getCode()) == true)
             return -1;
         carModels.add(values);
         return values.getCode();
@@ -120,7 +114,7 @@ public class List_DBManager implements DB_manager {
 
     @Override
     public long addCar(Car values) {
-        if (ReturnCarById(values.getCarNumber()) == true)
+        if (carExists(values.getCarNumber()) == true)
             return -1;
         cars.add(values);
         return values.getCarNumber();

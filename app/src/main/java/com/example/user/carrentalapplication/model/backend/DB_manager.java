@@ -27,9 +27,9 @@ public interface DB_manager {
     */
     boolean AddUser(User user);
     List<User> getAllUsers();
-    Customer ReturnCustumerById(String values);
-    boolean ReturnCarById(Long values);
-    boolean ReturnCarModelById(Long values);
+
+    boolean carExists(Long values);
+    boolean carModelExists(Long values);
     boolean custumerExsits(Customer values);
     Boolean addCustomer(Customer values);
     long addCarModel(CarModel values);

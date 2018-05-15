@@ -1,8 +1,6 @@
 package com.example.user.carrentalapplication.model.datasource;
 
 import android.content.ContentValues;
-import android.provider.SyncStateContract;
-import android.util.Log;
 
 import com.example.user.carrentalapplication.model.backend.DB_manager;
 import com.example.user.carrentalapplication.model.entities.Branch;
@@ -15,8 +13,6 @@ import com.example.user.carrentalapplication.model.entities.User;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,13 +46,10 @@ public class MySQL_DBManager implements DB_manager {
         return null;
     }
 
-    @Override
-    public Customer ReturnCustumerById(String values) {
-        return null;
-    }
+
 
     @Override
-    public boolean ReturnCarById(Long values) {
+    public boolean carExists(Long values) {
 
         for (Car item:carList) {
             if(item.getCarNumber()==values )
@@ -67,7 +60,7 @@ public class MySQL_DBManager implements DB_manager {
     }
 
     @Override
-    public boolean ReturnCarModelById(Long values) {
+    public boolean carModelExists(Long values) {
 
         for (CarModel item:carModelList) {
             if(item.getCode()==values )
@@ -119,7 +112,7 @@ public class MySQL_DBManager implements DB_manager {
     {
         try {
 
-            if(ReturnCarModelById(values.getCode())==true)
+            if(carModelExists(values.getCode())==true)
                 return -1;
             String url = WEB_URL + "addModel.php" ;
 
@@ -146,7 +139,7 @@ public class MySQL_DBManager implements DB_manager {
 
         try {
 
-            if(ReturnCarModelById(values.getCarNumber())==true)
+            if(carModelExists(values.getCarNumber())==true)
                 return -1;
             String url = WEB_URL + "addCar.php" ;
 
