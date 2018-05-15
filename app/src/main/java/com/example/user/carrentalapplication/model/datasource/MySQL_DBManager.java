@@ -24,6 +24,8 @@ import java.util.List;
  * Created by AAA on 26/04/2018.
  */
 
+
+
 public class MySQL_DBManager implements DB_manager {
 
     private String WEB_URL ="http://crottenb.vlab.jct.ac.il/CR/";
