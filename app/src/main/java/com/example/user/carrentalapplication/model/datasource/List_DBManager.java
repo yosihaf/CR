@@ -72,6 +72,24 @@ public class List_DBManager implements DB_manager {
         }
         return null;
     }
+
+    @Override
+    public Branch ReturnBranchById(Integer values) {
+        for (Branch item:brunches) {
+            if(item.getBranchNumber()==(values) )
+                return item;
+        }
+        return null;
+    }
+    @Override
+    public CarModel ReturnModelById(Long values) {
+        for (CarModel item:carModels) {
+            if(item.getCode()==(values) )
+                return item;
+        }
+        return null;
+    }
+
     @Override
     public boolean custumerExsits(Customer values) {
         if(customers.contains(values))

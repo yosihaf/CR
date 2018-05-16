@@ -54,6 +54,22 @@ public class MySQL_DBManager implements DB_manager {
         }
         return null;
     }
+    @Override
+    public Branch ReturnBranchById(Integer values) {
+        for (Branch item:branchList) {
+            if(item.getBranchNumber()==(values) )
+                return item;
+        }
+        return null;
+    }
+    @Override
+    public CarModel ReturnModelById(Long values) {
+        for (CarModel item:carModelList) {
+            if(item.getCode()==(values) )
+                return item;
+        }
+        return null;
+    }
 
 
     @Override
@@ -178,7 +194,7 @@ public class MySQL_DBManager implements DB_manager {
 
         try {
 
-            if(carModelExists(values.getCarNumber())==true)
+            if(carExists(values.getCarNumber())==true)
                 return -1;
             String url = WEB_URL + "addCar.php" ;
 

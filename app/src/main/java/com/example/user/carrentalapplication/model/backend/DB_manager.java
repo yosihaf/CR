@@ -28,6 +28,8 @@ public interface DB_manager {
     boolean AddUser(User user);
     List<User> getAllUsers();
     Customer ReturnCustumerById(String values);
+    CarModel ReturnModelById(Long values);
+    Branch ReturnBranchById(Integer values);
     boolean carExists(Long values);
     boolean carModelExists(Long values);
     boolean custumerExsits(Customer values);

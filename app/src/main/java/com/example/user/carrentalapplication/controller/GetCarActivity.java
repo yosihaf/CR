@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.user.carrentalapplication.R;
 import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
+import com.example.user.carrentalapplication.model.datasource.MySQL_DBManager;
 import com.example.user.carrentalapplication.model.entities.Car;
 
 import java.util.List;
@@ -53,9 +54,10 @@ public class GetCarActivity extends BaseActivity {
                            TextView numModel = (TextView) convertView.findViewById(R.id.modelNumView);
                            TextView km = (TextView) convertView.findViewById(R.id.kilometersView);
                            TextView numCar = (TextView) convertView.findViewById(R.id.carNumberView);
-
-                           numBranch.setText("Branch Number: " + ((Integer) cars.get(position).getBranchNumber()).toString());
-                           numModel.setText("Model Number: " + ((Long) cars.get(position).getModel()).toString());
+                           numBranch.setText("Branch Number: " + DBManagerFactory.getManager().ReturnBranchById((Integer) cars.get(position).getBranchNumber()).getAdress());
+                          // numBranch.setText("Branch Number: " + ((Integer) cars.get(position).getBranchNumber()).toString());
+                           numModel.setText("Model Number: " + DBManagerFactory.getManager().ReturnModelById((Long) cars.get(position).getModel()).getModel());
+                           //numModel.setText("Model Number: " + ((Long) cars.get(position).getModel()).toString());
                            km.setText("Km: " + ((Long) cars.get(position).getKilometers()).toString());
                            numCar.setText("Car Number: " + ((Long) cars.get(position).getCarNumber()).toString());
 
@@ -76,4 +78,6 @@ public class GetCarActivity extends BaseActivity {
         listView.setAdapter(cars);
         this.setContentView(listView);
     }
+
+
 }
