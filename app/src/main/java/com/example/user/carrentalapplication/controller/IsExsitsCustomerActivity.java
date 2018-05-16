@@ -58,10 +58,8 @@ public class IsExsitsCustomerActivity extends BaseActivity implements View.OnCli
 
     private void SearchCostumer() {
 
-        String _id = (id.getText().toString());
-
        try {
-           String _idE = (id.getText().toString());
+
             new AsyncTask<Void, Void, Customer>() {
 
 
@@ -85,8 +83,8 @@ public class IsExsitsCustomerActivity extends BaseActivity implements View.OnCli
 
                     email.setVisibility(View.INVISIBLE);
                     if (customer != null) {
-                        answer.setVisibility(View.VISIBLE);
-                        answer.setText("is Exsist ");
+                        //answer.setVisibility(View.VISIBLE);
+                       // answer.setText("is Exsist ");
                         lastName.setVisibility(View.VISIBLE);
                         lastName.setText("  Last Name: " + customer.getLastName());
                         lastName.setVisibility(View.VISIBLE);
@@ -119,44 +117,7 @@ public class IsExsitsCustomerActivity extends BaseActivity implements View.OnCli
 
         }
 
-        Customer customer = DBManagerFactory.getManager().ReturnCustumerById(_id);
 
-        answer.setVisibility(View.INVISIBLE);
-
-        lastName.setVisibility(View.INVISIBLE);
-
-        lastName.setVisibility(View.INVISIBLE);
-
-        firstName.setVisibility(View.INVISIBLE);
-
-        idV.setVisibility(View.INVISIBLE);
-
-        phoneNumber.setVisibility(View.INVISIBLE);
-
-        email.setVisibility(View.INVISIBLE);
-
-        email.setVisibility(View.INVISIBLE);
-        if (customer != null) {
-            answer.setVisibility(View.VISIBLE);
-            answer.setText("is Exsist ");
-            lastName.setVisibility(View.VISIBLE);
-            lastName.setText("  Last Name: " + customer.getLastName());
-            lastName.setVisibility(View.VISIBLE);
-            firstName.setText("  First Name: " + customer.getFirstName());
-            firstName.setVisibility(View.VISIBLE);
-            idV.setText("  ID: " + ( customer.getId()).toString());
-            idV.setVisibility(View.VISIBLE);
-            phoneNumber.setText("  Phone Number:  " + ( customer.getPhoneNumber()).toString());
-            phoneNumber.setVisibility(View.VISIBLE);
-            email.setText("  Email Number: " + (customer.getEmail()).toString());
-            email.setVisibility(View.VISIBLE);
-            creditCard.setText("  Branch Number: " + ((Long) customer.getCreditCard()).toString());
-            email.setVisibility(View.VISIBLE);
-        } else {
-            answer.setVisibility(View.VISIBLE);
-            answer.setText("  is not Exsist ");
-
-        }
     }
 
 

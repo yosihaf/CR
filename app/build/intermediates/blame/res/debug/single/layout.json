@@ -20,12 +20,12 @@
         "source": "C:\\Users\\User\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout\\abc_screen_simple.xml"
     },
     {
-        "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
-        "source": "C:\\Users\\User\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout\\abc_action_bar_up_container.xml"
-    },
-    {
         "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_branch.xml",
         "source": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\layout\\activity_branch.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\User\\.android\\build-cache\\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\\output\\res\\layout\\abc_action_bar_up_container.xml"
     },
     {
         "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
@@ -98,6 +98,10 @@
     {
         "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_model.xml",
         "source": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\layout\\activity_model.xml"
+    },
+    {
+        "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_branch.xml",
+        "source": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\layout\\activity_add_branch.xml"
     },
     {
         "merged": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",

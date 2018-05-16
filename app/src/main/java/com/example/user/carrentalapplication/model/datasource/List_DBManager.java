@@ -78,6 +78,16 @@ public class List_DBManager implements DB_manager {
             return true;
         return false;
     }
+
+    @Override
+    public boolean branchExists(int values) {
+        for (Branch item:brunches) {
+            if(item.getBranchNumber()==values )
+                return true;
+        }
+        return false;
+    }
+
     @Override
     public boolean carExists(Long values){
         for (Car item:cars) {
@@ -102,6 +112,14 @@ public class List_DBManager implements DB_manager {
             return false;
         customers.add(values);
         return true;
+    }
+
+    @Override
+    public long addBranch(Branch values) {
+        if (branchExists(values.getBranchNumber()) == true)
+            return -1;
+        brunches.add(values);
+        return values.getBranchNumber();
     }
 
     @Override

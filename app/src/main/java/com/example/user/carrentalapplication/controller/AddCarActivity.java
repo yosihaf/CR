@@ -55,7 +55,7 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
 
     }
 
-    private List<Long> brunchNum() {
+   private List<Long> brunchNum() {
         List<Long> lst = new ArrayList<Long>() ;
         String s;
         for (Branch item:DBManagerFactory.getManager().getAllBrunches())
