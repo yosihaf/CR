@@ -20,6 +20,7 @@ import com.example.user.carrentalapplication.R;
 import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
 import com.example.user.carrentalapplication.model.backend.DB_manager;
 import com.example.user.carrentalapplication.model.datasource.List_DBManager;
+import com.example.user.carrentalapplication.model.datasource.MySQL_DBManager;
 import com.example.user.carrentalapplication.model.entities.Branch;
 import com.example.user.carrentalapplication.model.entities.Car;
 import com.example.user.carrentalapplication.model.entities.CarModel;
@@ -34,6 +35,7 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
     private TextView  model,branch;
     private Button addCar;
     private Spinner modelNum,brunchNum;
+  ;
     int indexModel=0;
     int indexBranch=0;
 
@@ -42,7 +44,7 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
         branch= (TextView) findViewById(R.id.BranchView);
         addCar = (Button) findViewById(R.id.OK_addCar_btn);
         brunchNum=(Spinner) findViewById(R.id.spinnerBrunch);
-        brunchNum.setAdapter(new ArrayAdapter<Long>(this, android.R.layout.simple_spinner_item, brunchNum()));
+        brunchNum.setAdapter(new ArrayAdapter<Integer>(this, android.R.layout.simple_spinner_item, brunchNum()));
         modelNum=(Spinner) findViewById(R.id.spinerModelNum);
         modelNum.setAdapter(new ArrayAdapter<Long>(this, android.R.layout.simple_spinner_item, codeModel()));
 
@@ -55,13 +57,12 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
 
     }
 
-   private List<Long> brunchNum() {
-        List<Long> lst = new ArrayList<Long>() ;
-        String s;
+  private List<Integer> brunchNum() {
+
+       List<Integer> lst = new ArrayList<Integer>() ;
         for (Branch item:DBManagerFactory.getManager().getAllBrunches())
         {
-          s= item.getAdress();
-            lst.add((long) item.getBranchNumber());
+            lst.add(item.getBranchNumber());
         }
         return lst;
     }
@@ -69,11 +70,9 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
     private List<Long> codeModel()
     {
         List<Long> lst = new ArrayList<Long>() ;
-        String s;
 
         for (CarModel item:DBManagerFactory.getManager().getAllModels())
         {
-            s=item.getModel();
             lst.add(item.getCode());
         }
         return lst;
@@ -115,10 +114,7 @@ public class AddCarActivity extends BaseActivity implements View.OnClickListener
     {
         Integer brunch = 0;
         Integer model=0;
-
         brunch= Integer.parseInt(brunchNum.getSelectedItem().toString());
-
-
         model = Integer.parseInt(modelNum.getSelectedItem().toString());
         Integer km = Integer.parseInt(kilometers.getText().toString());
         Integer car = Integer.parseInt(carNum.getText().toString());

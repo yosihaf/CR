@@ -100,7 +100,7 @@ public class List_DBManager implements DB_manager {
     @Override
     public boolean branchExists(int values) {
         for (Branch item:brunches) {
-            if(item.getBranchNumber()==values )
+            if(item.getBranchNumber()==values  )
                 return true;
         }
         return false;
@@ -118,7 +118,7 @@ public class List_DBManager implements DB_manager {
     public boolean carModelExists(Long values)
     {
         for (CarModel item:carModels) {
-            if(item.getCode()==values )
+            if(item.getCode()==values  )
                 return true;
         }
         return false;

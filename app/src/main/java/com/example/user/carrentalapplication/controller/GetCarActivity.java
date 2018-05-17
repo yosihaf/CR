@@ -54,9 +54,9 @@ public class GetCarActivity extends BaseActivity {
                            TextView numModel = (TextView) convertView.findViewById(R.id.modelNumView);
                            TextView km = (TextView) convertView.findViewById(R.id.kilometersView);
                            TextView numCar = (TextView) convertView.findViewById(R.id.carNumberView);
-                           numBranch.setText("Branch Number: " + DBManagerFactory.getManager().ReturnBranchById((Integer) cars.get(position).getBranchNumber()).getAdress());
+                           numBranch.setText("Branch: " + DBManagerFactory.getManager().ReturnBranchById((Integer) cars.get(position).getBranchNumber()).getAdress());
                           // numBranch.setText("Branch Number: " + ((Integer) cars.get(position).getBranchNumber()).toString());
-                           numModel.setText("Model Number: " + DBManagerFactory.getManager().ReturnModelById((Long) cars.get(position).getModel()).getModel());
+                           numModel.setText("Model: " + DBManagerFactory.getManager().ReturnModelById((Long) cars.get(position).getModel()).getModel());
                            //numModel.setText("Model Number: " + ((Long) cars.get(position).getModel()).toString());
                            km.setText("Km: " + ((Long) cars.get(position).getKilometers()).toString());
                            numCar.setText("Car Number: " + ((Long) cars.get(position).getCarNumber()).toString());

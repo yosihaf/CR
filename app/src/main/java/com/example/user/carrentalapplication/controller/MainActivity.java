@@ -2,6 +2,7 @@ package com.example.user.carrentalapplication.controller;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +12,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.user.carrentalapplication.R;
+import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
 import com.example.user.carrentalapplication.model.entities.CarModel;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button cars;
@@ -39,6 +44,24 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
+       try {
+
+            new AsyncTask<Void, Void, Void>() {
+
+
+
+                @Override
+                protected Void doInBackground(Void... params) {
+                    List<String> lst = new ArrayList<String>() ;
+                    DBManagerFactory.getManager();
+                    return null;
+                }
+            }.execute();
+
+
+        } catch (Exception e) {
+
+        }
     }
 
     @Override

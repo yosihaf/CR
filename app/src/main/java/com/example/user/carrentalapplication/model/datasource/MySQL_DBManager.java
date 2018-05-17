@@ -84,10 +84,10 @@ public class MySQL_DBManager implements DB_manager {
     }
 
     @Override
-    public boolean carModelExists(Long values) {
+    public boolean carModelExists(Long values ) {
 
         for (CarModel item:carModelList) {
-            if(item.getCode()==values )
+            if(item.getCode()==values  )
                 return true;
         }
         return false;
