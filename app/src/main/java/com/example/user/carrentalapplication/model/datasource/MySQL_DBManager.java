@@ -48,6 +48,7 @@ public class MySQL_DBManager implements DB_manager {
 
     @Override
     public Customer ReturnCustumerById(String values) {
+        customerList = getAllCustomers();
         for (Customer item:customerList) {
             if(item.getId().equals(values) )
                 return item;

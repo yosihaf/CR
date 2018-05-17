@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he-rIL\\values-he-rIL.xml",
+        "outputFile": "C:\\AndroidStudioProjects\\CR\\CR\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-he-rIL\\values-he-rIL.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 107
                 },
                 "from": {
-                    "file": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
+                    "file": "C:\\AndroidStudioProjects\\CR\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 149
                 },
                 "from": {
-                    "file": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
+                    "file": "C:\\AndroidStudioProjects\\CR\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 196
                 },
                 "from": {
-                    "file": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
+                    "file": "C:\\AndroidStudioProjects\\CR\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
@@ -68,7 +68,7 @@
                     "endOffset": 237
                 },
                 "from": {
-                    "file": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
+                    "file": "C:\\AndroidStudioProjects\\CR\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -87,7 +87,7 @@
                     "endOffset": 282
                 },
                 "from": {
-                    "file": "C:\\Users\\User\\Desktop\\JAVA\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
+                    "file": "C:\\AndroidStudioProjects\\CR\\CR\\app\\src\\main\\res\\values-he-rIL\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

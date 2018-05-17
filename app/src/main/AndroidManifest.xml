@@ -38,9 +38,15 @@
         <activity android:name=".controller.BaseActivity" />
         <activity android:name=".controller.IsExsitsCustomerActivity" />
         <activity android:name=".controller.AddBranch" />
-        <activity
-            android:name=".Login2Activity"
-            android:label="@string/title_activity_login2"></activity>
+
+        <receiver
+            android:name=".model.backend.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.example.user.carrentalapplication.A_CUSTOM_INTENT"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
