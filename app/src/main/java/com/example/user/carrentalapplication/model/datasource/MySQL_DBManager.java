@@ -54,6 +54,22 @@ public class MySQL_DBManager implements DB_manager {
         }
         return null;
     }
+    @Override
+    public Branch ReturnBranchById(Integer values) {
+        for (Branch item:branchList) {
+            if(item.getBranchNumber()==(values) )
+                return item;
+        }
+        return null;
+    }
+    @Override
+    public CarModel ReturnModelById(Long values) {
+        for (CarModel item:carModelList) {
+            if(item.getCode()==(values) )
+                return item;
+        }
+        return null;
+    }
 
 
     @Override
@@ -68,10 +84,10 @@ public class MySQL_DBManager implements DB_manager {
     }
 
     @Override
-    public boolean carModelExists(Long values) {
+    public boolean carModelExists(Long values ) {
 
         for (CarModel item:carModelList) {
-            if(item.getCode()==values )
+            if(item.getCode()==values  )
                 return true;
         }
         return false;
@@ -85,6 +101,15 @@ public class MySQL_DBManager implements DB_manager {
             {
                 return true;
             }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean branchExists(int values) {
+        for (Branch item:branchList) {
+            if(item.getBranchNumber()==values )
+                return true;
         }
         return false;
     }
@@ -113,6 +138,28 @@ public class MySQL_DBManager implements DB_manager {
         }
         customerList.add(values);
         return true;
+    }
+
+    @Override
+    public long addBranch(Branch values) {
+        try {
+
+            if(branchExists(values.getBranchNumber())==true)
+                return -1;
+            String url = WEB_URL + "addBranch.php" ;
+
+            final ContentValues v = new ContentValues();
+            v.put( "_id", values.getBranchNumber() );
+            v.put( "address", values.getAdress() );
+            v.put( "space", values.getNumberOfParkingSpaces() );
+            PHPtools.POST( url, v );
+
+        } catch (Exception e) {
+            //Log.w( Constants.Log.APP_LOG, e.getMessage() );
+        }
+        branchList.add(values);
+        return values.getBranchNumber();
+
     }
 
     @Override
@@ -147,7 +194,7 @@ public class MySQL_DBManager implements DB_manager {
 
         try {
 
-            if(carModelExists(values.getCarNumber())==true)
+            if(carExists(values.getCarNumber())==true)
                 return -1;
             String url = WEB_URL + "addCar.php" ;
 

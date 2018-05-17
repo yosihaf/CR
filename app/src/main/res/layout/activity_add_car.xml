@@ -14,10 +14,9 @@
 
         <TextView
             android:id="@+id/BranchView"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:text="@string/brunch"
-
             />
 
         <Spinner
@@ -30,14 +29,13 @@
             android:id="@+id/modelView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/model" />
+            android:text="model" />
 
         <Spinner
             android:id="@+id/spinerModelNum"
             android:layout_width="330dp"
             android:layout_height="50dp"
             />
-
 
         <EditText
             android:id="@+id/editKilometers"
@@ -66,11 +64,5 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="-17dp" />
+
 </android.support.constraint.ConstraintLayout>

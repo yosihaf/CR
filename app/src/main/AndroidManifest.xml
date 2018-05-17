@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.user.carrentalapplication">
-    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
 
     <application
         android:allowBackup="true"
@@ -10,14 +16,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".controller.LogInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".controller.MainActivity" />
         <activity android:name=".controller.CarActivity" />
@@ -33,7 +37,10 @@
         <activity android:name=".controller.GetCustomerActivity" />
         <activity android:name=".controller.BaseActivity" />
         <activity android:name=".controller.IsExsitsCustomerActivity" />
-
+        <activity android:name=".controller.AddBranch" />
+        <activity
+            android:name=".Login2Activity"
+            android:label="@string/title_activity_login2"></activity>
     </application>
 
 </manifest>

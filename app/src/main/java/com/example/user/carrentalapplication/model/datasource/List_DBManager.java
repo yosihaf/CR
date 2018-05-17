@@ -72,12 +72,40 @@ public class List_DBManager implements DB_manager {
         }
         return null;
     }
+
+    @Override
+    public Branch ReturnBranchById(Integer values) {
+        for (Branch item:brunches) {
+            if(item.getBranchNumber()==(values) )
+                return item;
+        }
+        return null;
+    }
+    @Override
+    public CarModel ReturnModelById(Long values) {
+        for (CarModel item:carModels) {
+            if(item.getCode()==(values) )
+                return item;
+        }
+        return null;
+    }
+
     @Override
     public boolean custumerExsits(Customer values) {
         if(customers.contains(values))
             return true;
         return false;
     }
+
+    @Override
+    public boolean branchExists(int values) {
+        for (Branch item:brunches) {
+            if(item.getBranchNumber()==values  )
+                return true;
+        }
+        return false;
+    }
+
     @Override
     public boolean carExists(Long values){
         for (Car item:cars) {
@@ -90,7 +118,7 @@ public class List_DBManager implements DB_manager {
     public boolean carModelExists(Long values)
     {
         for (CarModel item:carModels) {
-            if(item.getCode()==values )
+            if(item.getCode()==values  )
                 return true;
         }
         return false;
@@ -102,6 +130,14 @@ public class List_DBManager implements DB_manager {
             return false;
         customers.add(values);
         return true;
+    }
+
+    @Override
+    public long addBranch(Branch values) {
+        if (branchExists(values.getBranchNumber()) == true)
+            return -1;
+        brunches.add(values);
+        return values.getBranchNumber();
     }
 
     @Override
