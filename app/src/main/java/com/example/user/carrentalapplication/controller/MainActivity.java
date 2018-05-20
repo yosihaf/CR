@@ -1,7 +1,9 @@
 package com.example.user.carrentalapplication.controller;
 
 import android.app.Activity;
+import android.content.BroadcastReceiver;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,6 +15,8 @@ import android.widget.Button;
 
 import com.example.user.carrentalapplication.R;
 import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
+import com.example.user.carrentalapplication.model.backend.MyReceiver;
+import com.example.user.carrentalapplication.model.backend.MyService;
 import com.example.user.carrentalapplication.model.entities.CarModel;
 
 import java.util.ArrayList;
@@ -23,7 +27,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button customers;
     private Button brunch;
     private Button model;
-
+    MyReceiver receiver;
+    public static final String mBroadcastStringAction = "com.example.user.carrentalapplication.A_CUSTOM_INTENT";
     private void findViews()
     {
         cars =(Button)findViewById( R.id.car_btn );
@@ -44,7 +49,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
-       try {
+        IntentFilter filter = new IntentFilter(MyReceiver.s);
+        filter.addCategory(Intent.CATEGORY_DEFAULT);
+        receiver = new MyReceiver();
+        registerReceiver(receiver, filter);
+        startService(new Intent(getBaseContext(), MyService.class));
+        try {
 
             new AsyncTask<Void, Void, Void>() {
 
@@ -63,6 +73,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
         }
     }
+
+
 
     @Override
     public void onClick(View v) {

@@ -6,7 +6,7 @@ package com.example.user.carrentalapplication.model.entities;
 
 public class Car {
     private int branchNumber;
-    private long modelNum;
+    private long model;
     private long kilometers;
     private long carNumber;
 
@@ -15,7 +15,7 @@ public class Car {
 
     public Car(int branchNumber, long modelNum, long kilometers, long carNumber) {
         this.branchNumber = branchNumber;
-        this.modelNum = modelNum;
+        this.model = modelNum;
         this.kilometers = kilometers;
         this.carNumber = carNumber;
     }
@@ -26,12 +26,12 @@ public class Car {
         this.branchNumber = branchNumber;
     }
 
-    public long getModel() {
-        return modelNum;
+    public Long getModel() {
+        return model;
     }
 
     public void setModel(long model) {
-        this.modelNum = model;
+        this.model = model;
     }
 
     public long getKilometers() {
