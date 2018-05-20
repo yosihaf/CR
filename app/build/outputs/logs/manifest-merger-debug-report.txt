@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:2:1-57:12
+ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:2:1-54:12
 	package
 		ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:3:5-52
 		INJECTED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:10:5-7
 	android:name
 		ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:10:22-69
 application
-ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:12:5-55:19
+ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:12:5-52:19
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.android\build-cache\d6426dc95e73f2852cd6599aa3e6e0fa249b52fc\output\AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:design:25.3.1] C:\Users\User\.android\build-cache\370a42e7d6ca7c3a003db3c70c59e14b020e8811\output\AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\User\.android\build-cache\c7c6f2c1b5f4ac90917cfacda3d8e943d4594988\output\AndroidManifest.xml:29:5-20
@@ -143,14 +143,6 @@ action#com.example.user.carrentalapplication.A_CUSTOM_INTENT
 ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:47:17-95
 	android:name
 		ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:47:25-93
-service#com.example.user.carrentalapplication.model.backend.MyService
-ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:51:9-54:47
-	android:enabled
-		ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:53:13-35
-	android:exported
-		ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:54:13-36
-	android:name
-		ADDED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml:52:13-52
 uses-sdk
 INJECTED from C:\Users\User\Desktop\JAVA\CR\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] C:\Users\User\.android\build-cache\d6426dc95e73f2852cd6599aa3e6e0fa249b52fc\output\AndroidManifest.xml:5:5-7:41

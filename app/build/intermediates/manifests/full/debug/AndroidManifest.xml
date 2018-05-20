@@ -57,11 +57,6 @@
                 <action android:name="com.example.user.carrentalapplication.A_CUSTOM_INTENT" />
             </intent-filter>
         </receiver>
-
-        <service
-            android:name="com.example.user.carrentalapplication.model.backend.MyService"
-            android:enabled="true"
-            android:exported="true" />
     </application>
 
 </manifest>

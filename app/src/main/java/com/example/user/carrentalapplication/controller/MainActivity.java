@@ -16,7 +16,7 @@ import android.widget.Button;
 import com.example.user.carrentalapplication.R;
 import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
 import com.example.user.carrentalapplication.model.backend.MyReceiver;
-import com.example.user.carrentalapplication.model.backend.MyService;
+
 import com.example.user.carrentalapplication.model.entities.CarModel;
 
 import java.util.ArrayList;
@@ -53,7 +53,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         filter.addCategory(Intent.CATEGORY_DEFAULT);
         receiver = new MyReceiver();
         registerReceiver(receiver, filter);
-        startService(new Intent(getBaseContext(), MyService.class));
+
         try {
 
             new AsyncTask<Void, Void, Void>() {

@@ -48,10 +48,7 @@
             </intent-filter>
         </receiver>
 
-        <service
-            android:name=".model.backend.MyService"
-            android:enabled="true"
-            android:exported="true"></service>
+
     </application>
 
 </manifest>
