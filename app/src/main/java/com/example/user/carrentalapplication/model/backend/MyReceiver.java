@@ -15,10 +15,9 @@ public class MyReceiver extends BroadcastReceiver {
             "com.example.user.carrentalapplication.A_CUSTOM_INTENT";
     @Override
     public void onReceive(Context context, Intent intent) {
-
         Bundle b = intent.getExtras();
         if (intent.getAction().matches("com.example.user.carrentalapplication.A_CUSTOM_INTENT"))
-            Toast.makeText(context, "TIME_TICK " + b.toString() , Toast.LENGTH_LONG).show();
+            Toast.makeText(context, "Order Closed"  , Toast.LENGTH_LONG).show();
 
 
 
