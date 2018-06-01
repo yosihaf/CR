@@ -20,8 +20,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="UserName"
-            tools:layout_editor_absoluteX="79dp"
-            tools:layout_editor_absoluteY="161dp"
+
             />
     <EditText
         android:id="@+id/password"
@@ -30,9 +29,7 @@
         android:ems="10"
 
         android:inputType="textPassword"
-        android:hint="PassWord"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="219dp" />
+        android:hint="PassWord" />
 
 
 
@@ -41,8 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="login"
-        tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="288dp" />
+         />
 \
 
     </LinearLayout>

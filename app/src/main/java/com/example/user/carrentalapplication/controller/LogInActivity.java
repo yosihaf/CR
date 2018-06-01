@@ -24,7 +24,6 @@ public class LogInActivity extends Activity implements View.OnClickListener {
         user = (EditText) findViewById(R.id.user);
         password = (EditText) findViewById(R.id.password);
         reg = (Button) findViewById(R.id.button_reg);
-
         reg.setOnClickListener(this);
 
     }
