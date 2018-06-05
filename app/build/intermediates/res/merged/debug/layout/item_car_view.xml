@@ -20,7 +20,7 @@
             android:id="@+id/modelNumView"
             android:layout_width="368dp"
             android:layout_height="wrap_content"
-            android:text="@string/branchNum"
+            android:text="@string/modelName"
             />
         <TextView
             android:id="@+id/kilometersView"
