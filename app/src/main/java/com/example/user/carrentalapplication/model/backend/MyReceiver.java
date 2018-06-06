@@ -31,8 +31,8 @@ public class MyReceiver extends  BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         //Bundle b = intent.getExtras();
         if (intent.getAction().matches(s))
-            //a.Notify("a","b");
-            Toast.makeText(context, "Order Closed" , Toast.LENGTH_LONG).show();
+            a.Notify("a","b");
+            //Toast.makeText(context, "Order Closed" , Toast.LENGTH_LONG).show();
 
     }
 

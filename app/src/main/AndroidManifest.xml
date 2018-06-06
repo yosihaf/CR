@@ -38,6 +38,9 @@
         <activity android:name=".controller.BaseActivity" />
         <activity android:name=".controller.IsExsitsCustomerActivity" />
         <activity android:name=".controller.AddBranch" />
+        <activity android:name=".controller.NotificationView"/>
+
+
 
         <receiver
             android:name=".model.backend.MyReceiver"

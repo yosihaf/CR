@@ -138,7 +138,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 .setContentText(notificationMessage)
                 .setStyle(new NotificationCompat.InboxStyle());
 
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+       //NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         Intent resultIntent = new Intent(this, NotificationView.class);
         resultIntent.putExtra("text",notificationMessage);
 

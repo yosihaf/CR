@@ -48,6 +48,7 @@
         <activity android:name="com.example.user.carrentalapplication.controller.BaseActivity" />
         <activity android:name="com.example.user.carrentalapplication.controller.IsExsitsCustomerActivity" />
         <activity android:name="com.example.user.carrentalapplication.controller.AddBranch" />
+        <activity android:name="com.example.user.carrentalapplication.controller.NotificationView" />
 
         <receiver
             android:name="com.example.user.carrentalapplication.model.backend.MyReceiver"
