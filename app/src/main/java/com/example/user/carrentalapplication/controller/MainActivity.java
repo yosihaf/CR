@@ -1,5 +1,6 @@
 package com.example.user.carrentalapplication.controller;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -127,7 +128,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     public void Notify(String notificationTitle, String notificationMessage) {
 
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
@@ -136,22 +138,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 .setContentText(notificationMessage)
                 .setStyle(new NotificationCompat.InboxStyle());
 
-
-
-
         NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        //Intent resultIntent = new Intent(this, NotificationView.class);
-        //resultIntent.putExtra("text",notificationMessage);
+        Intent resultIntent = new Intent(this, NotificationView.class);
+        resultIntent.putExtra("text",notificationMessage);
 
-        //TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        //stackBuilder.addParentStack(NotificationView.class);
-        //stackBuilder.addNextIntent(resultIntent);
-        /*PendingIntent resultPendingIntent =
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addParentStack(NotificationView.class);
+        stackBuilder.addNextIntent(resultIntent);
+        PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(
                         0,
                         PendingIntent.FLAG_UPDATE_CURRENT
-                );*/
-        //builder.setContentIntent(resultPendingIntent);
+                );
+        builder.setContentIntent(resultPendingIntent);
         NotificationManager mNotificationManager =
                (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotificationManager.notify(888, builder.build());

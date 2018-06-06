@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.example.user.carrentalapplication.R;
 import com.example.user.carrentalapplication.controller.MainActivity;
 
+
 import static android.content.Context.NOTIFICATION_SERVICE;
 
 public class MyReceiver extends  BroadcastReceiver {
@@ -28,14 +29,11 @@ public class MyReceiver extends  BroadcastReceiver {
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onReceive(Context context, Intent intent) {
-        Bundle b = intent.getExtras();
+        //Bundle b = intent.getExtras();
         if (intent.getAction().matches(s))
-
-            a.Notify("a","b");
-            //Toast.makeText(context, "Order Closed"  , Toast.LENGTH_LONG).show();
+            //a.Notify("a","b");
+            Toast.makeText(context, "Order Closed" , Toast.LENGTH_LONG).show();
 
     }
-
-
 
 }
