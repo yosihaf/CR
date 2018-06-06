@@ -5,6 +5,7 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
 import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.AsyncTask;
@@ -59,13 +60,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         filter.addCategory(Intent.CATEGORY_DEFAULT);
         receiver = new MyReceiver();
         registerReceiver(receiver, filter);
-
         try {
-
             new AsyncTask<Void, Void, Void>() {
-
-
-
                 @Override
                 protected Void doInBackground(Void... params) {
                     List<String> lst = new ArrayList<String>() ;
@@ -73,8 +69,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     return null;
                 }
             }.execute();
-
-
         } catch (Exception e) {
 
         }
@@ -143,25 +137,28 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 .setStyle(new NotificationCompat.InboxStyle());
 
 
-        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        Intent resultIntent = new Intent(this, NotificationView.class);
-        resultIntent.putExtra("text",notificationMessage);
 
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(NotificationView.class);
-        stackBuilder.addNextIntent(resultIntent);
-        PendingIntent resultPendingIntent =
+
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        //Intent resultIntent = new Intent(this, NotificationView.class);
+        //resultIntent.putExtra("text",notificationMessage);
+
+        //TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        //stackBuilder.addParentStack(NotificationView.class);
+        //stackBuilder.addNextIntent(resultIntent);
+        /*PendingIntent resultPendingIntent =
                 stackBuilder.getPendingIntent(
                         0,
                         PendingIntent.FLAG_UPDATE_CURRENT
-                );
-        builder.setContentIntent(resultPendingIntent);
+                );*/
+        //builder.setContentIntent(resultPendingIntent);
         NotificationManager mNotificationManager =
-                (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+               (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         mNotificationManager.notify(888, builder.build());
 
 
     }
+
 
 
 

@@ -3143,11 +3143,11 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0e004b;
         public static final int add=0x7f0e0026;
         public static final int addBranch_btn=0x7f0e0093;
-        public static final int addCarMenu=0x7f0e00e3;
-        public static final int addCarModelMenu=0x7f0e00e6;
+        public static final int addCarMenu=0x7f0e00e4;
+        public static final int addCarModelMenu=0x7f0e00e7;
         public static final int addCar_btn=0x7f0e0095;
         public static final int addCusomer_btn=0x7f0e0097;
-        public static final int addCustomerMenu=0x7f0e00e9;
+        public static final int addCustomerMenu=0x7f0e00ea;
         public static final int addModel_btn=0x7f0e00af;
         public static final int addressView=0x7f0e00bd;
         public static final int alertTitle=0x7f0e005f;
@@ -3158,14 +3158,14 @@ containing a value of this type.
         public static final int basic=0x7f0e0015;
         public static final int beginning=0x7f0e003f;
         public static final int bottom=0x7f0e002e;
-        public static final int branchMenu=0x7f0e00eb;
+        public static final int branchMenu=0x7f0e00ec;
         public static final int branchNumberView=0x7f0e00c3;
         public static final int brunch_btn=0x7f0e00ad;
         public static final int buttonPanel=0x7f0e0052;
         public static final int button_reg=0x7f0e00a4;
         public static final int cancel_action=0x7f0e00cd;
-        public static final int carMenu=0x7f0e00e2;
-        public static final int carModelMenu=0x7f0e00e5;
+        public static final int carMenu=0x7f0e00e3;
+        public static final int carModelMenu=0x7f0e00e6;
         public static final int carNumberView=0x7f0e00c0;
         public static final int car_btn=0x7f0e00ab;
         public static final int center=0x7f0e002f;
@@ -3183,7 +3183,7 @@ containing a value of this type.
         public static final int creditCardView=0x7f0e00a1;
         public static final int custom=0x7f0e005c;
         public static final int customPanel=0x7f0e005b;
-        public static final int customerMenu=0x7f0e00e8;
+        public static final int customerMenu=0x7f0e00e9;
         public static final int customers_btn=0x7f0e00ae;
         public static final int decor_content_parent=0x7f0e0069;
         public static final int default_activity_button=0x7f0e004e;
@@ -3229,13 +3229,13 @@ containing a value of this type.
         public static final int firstNameView=0x7f0e009c;
         public static final int fixed=0x7f0e0046;
         public static final int gearView=0x7f0e00c7;
-        public static final int getBranchMenu=0x7f0e00ec;
+        public static final int getBranchMenu=0x7f0e00ed;
         public static final int getBranch_btn=0x7f0e0094;
-        public static final int getCarMenu=0x7f0e00e4;
-        public static final int getCarModelMenu=0x7f0e00e7;
+        public static final int getCarMenu=0x7f0e00e5;
+        public static final int getCarModelMenu=0x7f0e00e8;
         public static final int getCars_btn=0x7f0e0096;
         public static final int getCusomer_btn=0x7f0e0098;
-        public static final int getCustomerMenu=0x7f0e00ea;
+        public static final int getCustomerMenu=0x7f0e00eb;
         public static final int getModel_btn=0x7f0e00b0;
         public static final int home=0x7f0e0004;
         public static final int homeAsUp=0x7f0e001c;
@@ -3258,7 +3258,7 @@ containing a value of this type.
         public static final int login=0x7f0e00a9;
         public static final int login_form=0x7f0e00a6;
         public static final int login_progress=0x7f0e00a5;
-        public static final int masked=0x7f0e00e1;
+        public static final int masked=0x7f0e00e2;
         public static final int media_actions=0x7f0e00cf;
         public static final int middle=0x7f0e0040;
         public static final int mini=0x7f0e003e;
@@ -3330,6 +3330,7 @@ containing a value of this type.
         public static final int submit_area=0x7f0e0076;
         public static final int tabMode=0x7f0e001a;
         public static final int text=0x7f0e00de;
+        public static final int text1=0x7f0e00e0;
         public static final int text2=0x7f0e00dc;
         public static final int textSpacerNoButtons=0x7f0e0059;
         public static final int textSpacerNoTitle=0x7f0e0058;
@@ -3349,7 +3350,7 @@ containing a value of this type.
         public static final int useLogo=0x7f0e0020;
         public static final int user=0x7f0e00a2;
         public static final int view_offset_helper=0x7f0e000e;
-        public static final int visible=0x7f0e00e0;
+        public static final int visible=0x7f0e00e1;
         public static final int withText=0x7f0e0045;
         public static final int wrap=0x7f0e0011;
         public static final int wrap_content=0x7f0e002c;
@@ -3443,10 +3444,11 @@ containing a value of this type.
         public static final int notification_template_media_custom=0x7f04004a;
         public static final int notification_template_part_chronometer=0x7f04004b;
         public static final int notification_template_part_time=0x7f04004c;
-        public static final int select_dialog_item_material=0x7f04004d;
-        public static final int select_dialog_multichoice_material=0x7f04004e;
-        public static final int select_dialog_singlechoice_material=0x7f04004f;
-        public static final int support_simple_spinner_dropdown_item=0x7f040050;
+        public static final int notification_view=0x7f04004d;
+        public static final int select_dialog_item_material=0x7f04004e;
+        public static final int select_dialog_multichoice_material=0x7f04004f;
+        public static final int select_dialog_singlechoice_material=0x7f040050;
+        public static final int support_simple_spinner_dropdown_item=0x7f040051;
     }
     public static final class menu {
         public static final int car_rental_menu=0x7f0f0000;
