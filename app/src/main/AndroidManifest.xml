@@ -43,7 +43,7 @@
 
 
         <receiver
-            android:name=".model.backend.MyReceiver"
+            android:name=".model.backend.Receiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

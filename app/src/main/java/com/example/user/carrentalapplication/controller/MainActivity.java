@@ -1,31 +1,15 @@
 package com.example.user.carrentalapplication.controller;
 
-import android.annotation.TargetApi;
-import android.app.Activity;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.app.TaskStackBuilder;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.AsyncTask;
-import android.os.Build;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.NotificationCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 import com.example.user.carrentalapplication.R;
 import com.example.user.carrentalapplication.model.backend.DBManagerFactory;
-import com.example.user.carrentalapplication.model.backend.MyReceiver;
-
-import com.example.user.carrentalapplication.model.entities.CarModel;
+import com.example.user.carrentalapplication.model.backend.Receiver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,7 +19,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button customers;
     private Button brunch;
     private Button model;
-    MyReceiver receiver;
+    Receiver receiver;
     public static final String mBroadcastStringAction = "com.example.user.carrentalapplication.A_CUSTOM_INTENT";
     private void findViews()
     {
@@ -57,9 +41,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         findViews();
-        IntentFilter filter = new IntentFilter(MyReceiver.s);
+        IntentFilter filter = new IntentFilter(Receiver.s);
         filter.addCategory(Intent.CATEGORY_DEFAULT);
-        receiver = new MyReceiver();
+        receiver = new Receiver();
         registerReceiver(receiver, filter);
         try {
             new AsyncTask<Void, Void, Void>() {
@@ -129,34 +113,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    public void Notify(String notificationTitle, String notificationMessage) {
-
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(this)
-                .setSmallIcon(android.R.drawable.btn_star)
-                .setContentTitle(notificationTitle)
-                .setContentText(notificationMessage)
-                .setStyle(new NotificationCompat.InboxStyle());
-
-       //NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        Intent resultIntent = new Intent(this, NotificationView.class);
-        resultIntent.putExtra("text",notificationMessage);
-
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(NotificationView.class);
-        stackBuilder.addNextIntent(resultIntent);
-        PendingIntent resultPendingIntent =
-                stackBuilder.getPendingIntent(
-                        0,
-                        PendingIntent.FLAG_UPDATE_CURRENT
-                );
-        builder.setContentIntent(resultPendingIntent);
-        NotificationManager mNotificationManager =
-               (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        mNotificationManager.notify(888, builder.build());
 
 
-    }
 
 
 
